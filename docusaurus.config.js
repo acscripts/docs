@@ -12,6 +12,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'assets/favicon.svg',
+  trailingSlash: false,
 
   presets: [
     [
