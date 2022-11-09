@@ -1,0 +1,12 @@
+node_modules
+pnpm-debug.log*
+
+build
+
+.docusaurus
+
+.env
+.env.development
+
+.vscode
+.idea
