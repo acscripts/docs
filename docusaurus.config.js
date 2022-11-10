@@ -48,14 +48,22 @@ const config = {
         },
         items: [
           {
-            href: 'https://www.github.com/antond15',
-            label: 'GitHub',
-            position: 'left',
+            href: 'https://github.com/antond15',
+            position: 'right',
+            className: 'header-icon icon-github',
+            'aria-label': 'GitHub repository',
           },
           {
             href: 'https://discord.gg/2ZezMw2xvR',
-            label: 'Discord',
-            position: 'left',
+            position: 'right',
+            className: 'header-icon icon-discord',
+            'aria-label': 'Discord server',
+          },
+          {
+            href: 'https://ko-fi.com/antond',
+            position: 'right',
+            className: 'header-icon icon-kofi',
+            'aria-label': 'Ko-Fi link',
           },
         ],
       },
