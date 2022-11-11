@@ -86,3 +86,13 @@ This is how the options are written in your standard Lua table.
   clearable?: boolean; // whether the user can clear the date value
 }
 ```
+
+
+
+## Signature
+```ts
+{
+  type: 'signature';
+  value?: string; // default value
+}
+```
