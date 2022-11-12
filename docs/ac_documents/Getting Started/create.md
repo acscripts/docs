@@ -44,9 +44,10 @@ This is how the options are written in your standard Lua table.
   type: 'text';
   value?: string; // default value
   min?: number; // minimal number of characters
-  max?: number; // maximum number of characters
+  max?: number; // maximum number of characters [default: 50]
 }
 ```
+For unlimited number of characters, set `max` to `-1` - although it's not recommended.
 
 
 
@@ -59,9 +60,10 @@ This is how the options are written in your standard Lua table.
   maxRows?: number; // maximum number of rows
   autosize?: boolean; // if true, textarea will grow with content until maxRows are reached
   min?: number; // minimal number of characters
-  max?: number; // maximum number of characters
+  max?: number; // maximum number of characters [default: 100]
 }
 ```
+For unlimited number of characters, set `max` to `-1` - although it's not recommended.
 
 
 
