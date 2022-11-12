@@ -43,6 +43,8 @@ This is how the options are written in your standard Lua table.
 {
   type: 'text';
   value?: string; // default value
+  min?: number; // minimal number of characters
+  max?: number; // maximum number of characters
 }
 ```
 
@@ -56,6 +58,8 @@ This is how the options are written in your standard Lua table.
   minRows?: number; // minimal number of rows
   maxRows?: number; // maximum number of rows
   autosize?: boolean; // if true, textarea will grow with content until maxRows are reached
+  min?: number; // minimal number of characters
+  max?: number; // maximum number of characters
 }
 ```
 
