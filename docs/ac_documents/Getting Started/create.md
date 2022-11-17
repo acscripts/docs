@@ -102,3 +102,39 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
   value?: string; // default value
 }
 ```
+
+
+
+## Select
+```ts
+{
+  type: 'select';
+  value?: string; // default value (must be one of the options value)
+  searchable?: boolean; // whether the user can search in options
+  clearable?: boolean; // whether the user can clear the selected value
+  data: string[] | SelectItem[]; // available options (explained below)
+}
+```
+
+Available options (`data`) can be either a simple array of strings
+```ts
+data: ['Bob', 'John', 'George']
+```
+
+or an array of objects with the following structure
+```ts
+{
+  value: string; // value that will be returned as an user input
+  label?: string; // label that will be displayed in the select dropdown
+  disabled?: boolean; // whether the option is disabled
+  group?: string; // group name 
+}
+```
+```ts
+data: [
+  { value: 'bob', label: 'Bob', group: 'Friends' },
+  { value: 'john', label: 'John', group: 'Friends', disabled: true },
+  { value: 'george', label: 'George', group: 'Strangers' },
+  { value: 'paul', label: 'Paul', group: 'Strangers' },
+]
+```
