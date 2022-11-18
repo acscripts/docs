@@ -1,22 +1,15 @@
 ---
-title: Creating documents
-sidebar_position: 1
+title: Available fields
+sidebar_position: 2
 ---
 
-# Creating documents
-
-Here you can find detailed description of each field option.
-
-:::note
-Field options are written in TypeScript interface format as it provides much more flexibility and **clarity** than any other format.  
-Question mark (`?`) means that the option is optional. You can find more information about TypeScript interfaces [here](https://www.typescriptlang.org/docs/handbook/2/objects.html).
-:::
+# Available fields
 
 ## Shared options
 The following options are available and same for all field types.
 Type specific options are supposed to be added among these.
 ```ts
-[name: string]: {
+{
   label: string; // input label
   placeholder?: string; // describes expected value
   required?: boolean; // whether the field is required
@@ -27,7 +20,8 @@ Type specific options are supposed to be added among these.
 #### Example (Lua)
 This is how the options are written in your standard Lua table.
 ```lua
-['firstName'] = {
+{
+  name = 'firstName',
   type = 'text',
   label = 'First name',
   placeholder = 'Enter your first name',
@@ -102,6 +96,7 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
   value?: string; // default value
 }
 ```
+If you don't want the signature font pad to be visible, you can use the [`text`](#text) field instead.
 
 
 
@@ -109,7 +104,7 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 ```ts
 {
   type: 'select';
-  value?: string; // default value (must be one of the options value)
+  value?: string; // default value (must be one of the options values)
   searchable?: boolean; // whether the user can search in options
   clearable?: boolean; // whether the user can clear the selected value
   data: string[] | SelectItem[]; // available options (explained below)
@@ -117,24 +112,24 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 ```
 
 Available options (`data`) can be either a simple array of strings
-```ts
-data: ['Bob', 'John', 'George']
+```lua
+data = {'Bob', 'John', 'George'}
 ```
 
-or an array of objects with the following structure
+or an array of objects with the following structure.
 ```ts
 {
   value: string; // value that will be returned as an user input
-  label?: string; // label that will be displayed in the select dropdown
+  label?: string; // label that will be displayed in the select dropdown [default: value]
   disabled?: boolean; // whether the option is disabled
   group?: string; // group name 
 }
 ```
-```ts
-data: [
-  { value: 'bob', label: 'Bob', group: 'Friends' },
-  { value: 'john', label: 'John', group: 'Friends', disabled: true },
-  { value: 'george', label: 'George', group: 'Strangers' },
-  { value: 'paul', label: 'Paul', group: 'Strangers' },
-]
+```lua
+data = {
+  { value = 'bob', label = 'Bob', group = 'Friends' },
+  { value = 'john', label = 'John', group = 'Friends', disabled = true },
+  { value = 'george', label = 'George', group = 'Strangers' },
+  { value = 'paul', label = 'Paul', group = 'Strangers' },
+}
 ```
