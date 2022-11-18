@@ -15,3 +15,8 @@ ac_documents must be started **AFTER** ox_inventory.
 ensure ox_inventory
 ensure ac_documents
 ```
+
+## How are document data stored?
+The document data are stored **separately** in database. Only the entry ID is stored in item's metadata.  
+This way, we prevent ox_inventory from being bloated with redundant data.  
+Each document is fetched from database only on request and then **cached**.
