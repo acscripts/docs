@@ -13,7 +13,7 @@ Type specific options are supposed to be added among these.
   label: string; // input label
   placeholder?: string; // describes expected value
   required?: boolean; // whether the field is required
-  span?: 1 | 2; // how many columns the field should take
+  span?: 1 | 2 | 3 | 4; // how many columns the field should take [default: 2 (half)]
 }
 ```
 
