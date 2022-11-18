@@ -13,6 +13,11 @@ slug: ./../
 
 
 
+## Database
+Before using the resource, you need to import the `documents.sql` file into your database.  
+
+
+
 ## Creating items
 You can change the item names in `ac_documents/data/config.lua`.  
 The following snippets are just recommended examples. You can change it however you want.
