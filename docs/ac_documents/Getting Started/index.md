@@ -79,18 +79,18 @@ The following snippets are just recommended examples. You can change it however 
 The preset is defined in the paper's `type` metadata.
 
 ### Shops
-You can use ox_inventory's shops to *sell* paper with predefined preset.
+You can use ox_inventory shops to simulate a printer, for example.
 ```lua
 -- ox_inventory/data/shops.lua
-PoliceDocuments = {
-    name = 'Police Documents',
+PrinterMRPD = {
+    name = 'MRPD Printer',
     groups = shared.police,
     inventory = {
-        { name = 'paper', price = 1, metadata = { type = 'MedicalReport' } },
-        { name = 'paper', price = 1, metadata = { type = 'ArrestWarrant' } },
-        { name = 'paper', price = 1, metadata = { type = 'CriminalRecord' } },
+        { name = 'paper', price = 0, metadata = { type = 'MedicalReport' } },
+        { name = 'paper', price = 0, metadata = { type = 'ArrestWarrant' } },
+        { name = 'paper', price = 0, metadata = { type = 'CriminalRecord' } },
     }, locations = {
-        vec3(443.59, -975.3, 30.68)
+        vec3(443.59, -975.3, 30.68),
     }
 },
 ```
