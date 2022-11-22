@@ -49,7 +49,7 @@ Question mark (`?`) means that the option is optional. You can find more informa
 
 
 ## Fields
-All field types are listed [here](./).
+All field types are listed [here](./presets/fields).
 <details className='dropdown'>
   <summary>Show image</summary>
   <img src='https://i.imgur.com/spHDrQ3.png' alt='Inputs' />
