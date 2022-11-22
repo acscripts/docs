@@ -1,6 +1,6 @@
 ---
 title: Creating presets
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Creating presets
@@ -49,7 +49,7 @@ Question mark (`?`) means that the option is optional. You can find more informa
 
 
 ## Fields
-All field types are listed [here](./fields).
+All field types are listed [here](./).
 <details className='dropdown'>
   <summary>Show image</summary>
   <img src='https://i.imgur.com/spHDrQ3.png' alt='Inputs' />
