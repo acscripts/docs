@@ -25,6 +25,14 @@ Whether to check for newer resource version and notify in server console.
 
 
 
+## addCrumpledPaper
+Whether to add a crumpled paper item to player's inventory after destroying a document.
+
+**Accepted values**  
+`true` / `false`
+
+
+
 ## items
 Names of items you created in `ox_inventory/data/items.lua`.  
 If you used the snippets in [Creating items](./#creating-items) section, you don't have to change anything.
