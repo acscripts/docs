@@ -20,7 +20,6 @@ The `bridge/server.lua` file must return a table with the following data:
 
 ## Pre-made bridges
 - [OX Inventory](./server/ox_inventory)
-- [QB Inventory](./server/qb-inventory)
 - [LJ Inventory](./server/lj-inventory)
 
 
