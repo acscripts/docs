@@ -66,6 +66,12 @@ const config = {
             className: 'header-icon icon-kofi',
             'aria-label': 'Ko-Fi link',
           },
+          {
+            href: 'https://ac-scripts.tebex.io',
+            position: 'right',
+            className: 'header-icon icon-tebex',
+            'aria-label': 'Tebex store',
+          },
         ],
       },
       prism: {

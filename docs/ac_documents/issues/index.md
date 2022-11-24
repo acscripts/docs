@@ -1,6 +1,6 @@
 ---
 title: Common issues
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Common issues

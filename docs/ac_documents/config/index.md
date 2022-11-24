@@ -1,6 +1,6 @@
 ---
 title: Configuration
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Configuration
@@ -22,6 +22,14 @@ Whether to check for newer resource version and notify in server console.
 **Accepted values**  
 `true` = You will be notified in server console when a newer version of **ac_documents** is available.  
 `false` = You will need to manually check for a newer version on [Keymaster](https://keymaster.fivem.net/asset-grants) 👎🏽
+
+
+
+## addCrumpledPaper
+Whether to add a crumpled paper item to player's inventory after destroying a document.
+
+**Accepted values**  
+`true` / `false`
 
 
 
