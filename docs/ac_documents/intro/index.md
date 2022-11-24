@@ -11,9 +11,9 @@ Make sure to read this carefully before using the script.
 - [OX MySQL (oxmysql)](https://github.com/overextended/oxmysql/releases/latest)
 - your inventory system \*
 
-\* Support for custom inventories can be done by editing the inventory [bridge](./).  
+\* Support for custom inventories can be done by editing the inventory [bridge](ac_documents/bridge).  
 The default inventory bridge is for [ox_inventory](https://github.com/overextended/ox_inventory).  
-All available inventory bridges provided by us are listed [here](./), however you can create your own.
+All available inventory bridges provided by us are listed [here](ac_documents/bridge), however you can create your own.
 
 
 

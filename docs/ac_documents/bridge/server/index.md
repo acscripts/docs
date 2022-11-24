@@ -6,7 +6,7 @@ sidebar_position: 2
 # Server bridge
 The `bridge/server.lua` file must return a table with the following data:
 ```ts
-{
+return {
   getPlayer: function;
   addItem: function;
   removeItem: function;
@@ -20,7 +20,11 @@ The `bridge/server.lua` file must return a table with the following data:
 
 ## Pre-made bridges
 - [OX Inventory](./server/ox_inventory)
-- [LJ Inventory](./server/lj-inventory)
+
+:::tip
+You can create your own inventory bridge by following the guide below.  
+If you need help, you can ask on our [Discord](https://discord.gg/2ZezMw2xvR) in support ticket.
+:::
 
 
 
