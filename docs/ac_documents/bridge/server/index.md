@@ -119,3 +119,20 @@ If `preset` is set to `'type'`, then the preset name will be saved in `metadata.
 ```lua
 metadata.type = 'MedicalReport'
 ```
+
+
+
+## Example for `getPlayer`
+```lua
+local QB = exports['qb-core']:GetCoreObject()
+
+-- return QbPlayer object
+local function getPlayer(playerId)
+    return QB.Functions.GetPlayer(playerId)
+end
+
+-- recieves QbPlayer object as "player"
+local function addItem(player, item, count, metadata, slot)
+    return player.Functions.AddItem(item, count, slot, metadata)
+end
+```
