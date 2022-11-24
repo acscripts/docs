@@ -14,25 +14,22 @@ local function getPlayer(playerId)
 end
 
 local function addItem(player, item, count, metadata, slot)
-    local success = Inventory:AddItem(player, item, count, metadata, slot)
-    return success
+    return Inventory:AddItem(player, item, count, metadata, slot)
 end
 
 local function removeItem(player, item, count, metadata, slot)
-    local success = Inventory:RemoveItem(player, item, count, metadata, slot)
-    return success
+    return Inventory:RemoveItem(player, item, count, metadata, slot)
 end
 
 local function canSwapItem(player, firstItem, firstItemCount, testItem, testItemCount)
-    local success = Inventory:CanSwapItem(player, firstItem, firstItemCount, testItem, testItemCount)
-    return success
+    return Inventory:CanSwapItem(player, firstItem, firstItemCount, testItem, testItemCount)
 end
 
 local function getSlot(player, slot)
     local item = Inventory:GetSlot(player, slot)
     return {
-        name = item.name,
-        metadata = item.metadata,
+        name = item?.name,
+        metadata = item?.metadata,
     }
 end
 
