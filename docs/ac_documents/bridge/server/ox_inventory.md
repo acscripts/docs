@@ -48,3 +48,47 @@ return {
     metadata = metadata,
 }
 ```
+
+## Creating items
+Add the following code to `ox_inventory/data/items.lua`.
+
+```lua
+['paper'] = {
+    label = 'Paper',
+    weight = 1,
+    close = true,
+    consume = 0,
+    server = {
+        export = 'ac_documents.createDocument:ox',
+    }
+},
+
+['crumpled_paper'] = {
+    label = 'Crumpled paper',
+    weight = 1,
+},
+
+['document'] = {
+    label = 'Document',
+    weight = 1,
+    close = true,
+    consume = 0,
+    client = {
+        export = 'ac_documents.viewDocument:ox',
+    },
+    buttons = {
+        {
+            label = 'Make a copy',
+            action = function(slot)
+                TriggerServerEvent('ac_documents:copyDocument', slot)
+            end,
+        },
+        {
+            label = 'Destroy',
+            action = function(slot)
+                TriggerServerEvent('ac_documents:destroyDocument', slot)
+            end,
+        }
+    }
+},
+```
