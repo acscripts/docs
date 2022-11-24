@@ -59,7 +59,7 @@ Yes, we can. But there are some requirements that the inventory must meet:
 </table>
 
 \* This also aplies to LJ Inventory or other reskins.  
-It is very exploitable. Metadata support is poorly written with lot bugs.
+It is very exploitable. Metadata support is poorly written with lot of bugs.
 
 \*\* We don't know how secured is it as we've never used / worked with it.  
 However, it is a paid inventory and we don't have access to it.
