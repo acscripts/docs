@@ -5,10 +5,11 @@ sidebar_position: 3
 
 # Bridge
 Bridge module gives you access to functions controlling player's inventory.  
-Thanks to this, ac_documents is compatible with any inventory that supports item metadata.
+Thanks to this, ac_documents is compatible with **any inventory that supports item metadata**.
 
 ## Pre-made bridges
-- [OX Inventory](https://github.com/overextended/ox_inventory)
+- [OX Inventory](bridge/server/ox_inventory) (stable)
+- [QB Inventory](bridge/server/qb-inventory) (experimental)
 
 :::tip
 You can create your own inventory bridge by following [**this**](bridge/server) guide.  

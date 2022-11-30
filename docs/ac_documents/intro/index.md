@@ -13,7 +13,8 @@ Make sure to read this carefully before using the script.
 
 \* Support for custom inventories can be done by editing the inventory [bridge](ac_documents/bridge).  
 The default inventory bridge is for [ox_inventory](https://github.com/overextended/ox_inventory).  
-All available inventory bridges provided by us are listed [here](ac_documents/bridge), however you can create your own.
+All available inventory bridges provided by us are listed [here](ac_documents/bridge), however you can create your own.  
+The inventory **must support metadata**!
 
 
 
@@ -35,8 +36,9 @@ You can use the following images or make your own.
 
 ## Obtaining paper
 We provide snippets for some inventories or shops, however you can also create your own.  
-If you want to make your own system to get papers, use the following export.
+If you want to make your own system to get papers, use the following server export.
 ```lua
+-- server side
 local preset = 'MedicalReport'
 local count = 1
 

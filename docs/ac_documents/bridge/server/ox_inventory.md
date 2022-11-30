@@ -4,6 +4,8 @@ sidebar_position: 1
 ---
 
 # OX Inventory
+
+## Bridge
 Replace **all** content in `editable/bridge/server.lua` with the following code:
 
 ```lua
@@ -73,7 +75,7 @@ Add the following code to `ox_inventory/data/items.lua`.
     weight = 1,
     close = true,
     consume = 0,
-    client = {
+    server = {
         export = 'ac_documents.viewDocument:ox',
     },
     buttons = {
@@ -89,6 +91,23 @@ Add the following code to `ox_inventory/data/items.lua`.
                 TriggerServerEvent('ac_documents:destroyDocument', slot)
             end,
         }
+    }
+},
+```
+
+## Obtaining papers
+You can create a shop with papers using OX Inventory shop system.  
+Example below create a shop on police station for police job only.
+```lua
+-- ox_inventory/data/shops.lua
+Printer = {
+    name = 'Printer',
+    groups = shared.police,
+    inventory = {
+        { name = 'paper', price = 0, metadata = { type = 'ArrestWarrant' } },
+        { name = 'paper', price = 0, metadata = { type = 'CriminalRecord' } },
+    }, locations = {
+        vec3(443.59, -975.3, 30.68),
     }
 },
 ```
