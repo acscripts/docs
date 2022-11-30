@@ -19,7 +19,8 @@ return {
 
 
 ## Pre-made bridges
-- [OX Inventory](./server/ox_inventory)
+- [OX Inventory](./server/ox_inventory) (stable)
+- [QB Inventory](./server/qb-inventory) (experimental)
 
 :::tip
 You can create your own inventory bridge by following the guide below.  
