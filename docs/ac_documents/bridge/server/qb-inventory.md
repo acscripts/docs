@@ -108,3 +108,41 @@ return {
 }
 
 ```
+
+## Obtaining papers
+You can create a shop with papers using QB Shops.  
+```lua
+-- qb-shops/config.lua
+Config.Products = {
+    printer = {
+        {
+            name = 'paper',
+            price = 0,
+            amount = 100,
+            info = { type = 'MedicalReport' },
+            requiredJob = { 'ambulance' },
+            slot = 1,
+            type = 'item',
+        },
+        {
+            name = 'paper',
+            price = 0,
+            amount = 100,
+            info = { type = 'AppointmentRequest' },
+            slot = 2,
+            type = 'item',
+        },
+    },
+}
+
+Config.Locations = {
+    printer = {
+        label = 'Printer',
+        coords = vec4(443.59, -975.3, 30.68, 180.0),
+        ped = 'a_m_o_genstreet_01',
+        scenario = 'WORLD_HUMAN_STAND_MOBILE',
+        radius = 1.5,
+        products = Config.Products.printer
+    },
+}
+```
