@@ -9,7 +9,7 @@ Here you can find detailed description of each config option.
 
 ## locale
 What supported language to use for notifications and UI.  
-Locale name is the same as the file name in [locales](https://github.com/antond15/ac_radio/tree/main/locales) folder without the `.lua` extension (eg. **en**, **cs**).  
+Locale name is the same as the file name in [locales](https://github.com/acscripts/ac_radio/tree/main/locales) folder without the `.lua` extension (eg. **en**, **cs**).  
 
 **Accepted values**  
 `'en'` = Or any other locale.

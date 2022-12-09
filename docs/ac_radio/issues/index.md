@@ -11,7 +11,7 @@ Didn't find your answer here? Visit the [Discord server](https://discord.gg/2Zez
 Make sure you have the latest version of all required resources.
 
 **Downloads**  
-• [Latest version of ac_radio](https://github.com/antond15/ac_radio/releases/latest)  
+• [Latest version of ac_radio](https://github.com/acscripts/ac_radio/releases/latest)  
 • [Latest version of pma-voice](https://github.com/AvarianKnight/pma-voice/releases/latest)
 
 ## Start order

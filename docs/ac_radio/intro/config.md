@@ -10,7 +10,7 @@ Options marked with ✏ symbol automatically overrides the pma-voice convars.
 
 ## locale
 What supported language to use for notifications and UI.  
-Locale name is the same as the file name in [locales](https://github.com/antond15/ac_radio/tree/main/locales) folder without the `.lua` extension (eg. **en**, **cs**).  
+Locale name is the same as the file name in [locales](https://github.com/acscripts/ac_radio/tree/main/locales) folder without the `.lua` extension (eg. **en**, **cs**).  
 Note that some character sets may not be supported when using the default notifications (eg. `ěčřůďťň`).  
 Feel free to submit a PR with more languages!
 
@@ -29,7 +29,7 @@ Whether to check for newer resource version and notify in server console.
 
 
 ## useCustomNotify
-Whether to use custom notification function located in [utils.lua](https://github.com/antond15/ac_radio/tree/main/resource/client/utils.lua) in `customNotify`.  
+Whether to use custom notification function located in [utils.lua](https://github.com/acscripts/ac_radio/tree/main/resource/client/utils.lua) in `customNotify`.  
 If you have [ox_lib](https://github.com/overextended/ox_lib) resource running, you can set this to `true` and not worry about anything else.  
 Otherwise, you must add your own notification code snippet to the **customNotify** function.
 

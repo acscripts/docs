@@ -22,7 +22,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./src/sidebars.js'),
-          editUrl: 'https://github.com/antond15/docs/tree/main',
+          editUrl: 'https://github.com/acscripts/docs/tree/main',
           showLastUpdateTime: true,
         },
         blog: false,
@@ -49,7 +49,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/antond15',
+            href: 'https://github.com/acscripts',
             position: 'right',
             className: 'header-icon icon-github',
             'aria-label': 'GitHub repository',
