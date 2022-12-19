@@ -41,6 +41,14 @@ Add the following snippet to `ox_inventory/data/items.lua`.
     consume = 0,
 },
 ```
+
+Add the following snippet to `ox_inventory/module/items/server.lua`.
+```lua
+['empty_gift'] = {
+    size = {3, 5000}
+},
+```
+
 For more detailed steps, visit the official ["Creating items"](https://overextended.github.io/docs/ox_inventory/Guides/creatingItems) guide.
 
 ### Images
