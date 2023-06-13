@@ -49,7 +49,7 @@ Add the following snippet to `ox_inventory/module/items/server.lua`.
 },
 ```
 
-For more detailed steps, visit the official ["Creating items"](https://overextended.github.io/docs/ox_inventory/Guides/creatingItems) guide.
+For more detailed steps, visit the official ["Creating items"](https://overextended.dev/ox_inventory/Guides/creatingItems) guide.
 
 ### Images
 ![Empty gift](https://i.imgur.com/Rl9XyrW.png)

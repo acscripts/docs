@@ -32,7 +32,7 @@ Add the following snippet to `ox_inventory/data/items.lua`. The item image is al
 	}
 },
 ```
-For more detailed steps, visit the official ["Creating items"](https://overextended.github.io/docs/ox_inventory/Guides/creatingItems) guide.
+For more detailed steps, visit the official ["Creating items"](https://overextended.dev/ox_inventory/Guides/creatingItems) guide.
 
 
 
