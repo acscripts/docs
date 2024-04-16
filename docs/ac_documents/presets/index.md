@@ -32,7 +32,7 @@ Question mark (`?`) means that the option is optional. You can find more informa
 ```
 <details className='dropdown'>
   <summary>Show image</summary>
-  <img src='https://i.imgur.com/RWOuh15.png' alt='Header' />
+  <img src='/images/examples/preset_header.png' alt='Header' />
 </details>
 
 
@@ -52,5 +52,5 @@ Question mark (`?`) means that the option is optional. You can find more informa
 All field types are listed [here](./presets/fields).
 <details className='dropdown'>
   <summary>Show image</summary>
-  <img src='https://i.imgur.com/spHDrQ3.png' alt='Inputs' />
+  <img src='/images/examples/preset_fields.png' alt='Inputs' />
 </details>

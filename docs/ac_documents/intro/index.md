@@ -28,9 +28,9 @@ Make sure to create items called `paper`, `document` and `crumpled_paper` in you
 You can change the used item names in `ac_documents/editable/config.lua`.  
 You can use the following images or make your own.
 
-![Paper](https://i.imgur.com/SUE4W0Q.png)
-![Document](https://i.imgur.com/GcAGquG.png)
-![Crumpled paper](https://i.imgur.com/LbKlqh1.png)
+![Paper](/images/items/paper.png)
+![Document](/images/items/document.png)
+![Crumpled paper](/images/items/crumpled_paper.png)
 
 
 

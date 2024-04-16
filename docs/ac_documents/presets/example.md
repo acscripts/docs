@@ -8,14 +8,14 @@ sidebar_position: 2
 ## Medical report
 <details className='dropdown'>
   <summary>Show image</summary>
-  <img src='https://i.imgur.com/eVQHSKn.png' alt='Example preset' />
+  <img src='/images/examples/document_medical-report.png' alt='Example preset' />
 </details>
 
 ```lua
 ['MedicalReport'] = {
   title = 'MEDICAL REPORT',
   header = {
-    image = 'https://i.imgur.com/BKdEY41.png',
+    image = 'https://example.com/image.png',
     text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat ullam ratione animi minima recusandae. Magnam rem commodi porro eveniet.',
   },
   inputs = {
@@ -125,14 +125,14 @@ sidebar_position: 2
 ## Appointment request
 <details className='dropdown'>
   <summary>Show image</summary>
-  <img src='https://i.imgur.com/Ce6PXyv.png' alt='Example preset' />
+  <img src='/images/examples/document_appointment-request.png' alt='Example preset' />
 </details>
 
 ```lua
 ['AppointmentRequest'] = {
   title = 'APPOINTMENT REQUEST',
   header = {
-    image = 'https://i.imgur.com/xxw0NKt.png',
+    image = 'https://example.com/image.png',
     text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi placeat ullam ratione animi minima recusandae. Magnam rem commodi porro eveniet?',
   },
   inputs = {

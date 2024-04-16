@@ -52,9 +52,9 @@ Add the following snippet to `ox_inventory/module/items/server.lua`.
 For more detailed steps, visit the official ["Creating items"](https://overextended.dev/ox_inventory/Guides/creatingItems) guide.
 
 ### Images
-![Empty gift](https://i.imgur.com/Rl9XyrW.png)
-![Gift](https://i.imgur.com/q9FqT0F.png)
-![Opened gift](https://i.imgur.com/6dLX8Ib.png)
+![Empty gift](/images/items/empty_gift.png)
+![Gift](/images/items/gift.png)
+![Opened gift](/images/items/opened_gift.png)
 
 
 

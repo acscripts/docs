@@ -42,10 +42,8 @@ Usable item will be created automatically after starting this resource.
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES ('radio', 'Radio', 1, 0, 1);
 ```
-Add an image to your inventory which you can find [here](/assets/radio.png).
 
 
 
 ## QB Core
-The radio item will be created automatically after starting this resource.  
-Add an image to your inventory which you can find [here](/assets/radio.png).
+The radio item will be created automatically after starting this resource.
