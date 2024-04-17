@@ -35,11 +35,11 @@ const config: DocsThemeConfig = {
         <Image src="/logo.svg" alt="logo" width={24} height={24} />
         <span>AC Scripts</span>
       </div>
-    )
+    ),
   },
 
   darkMode: true,
   nextThemes: { defaultTheme: 'dark' },
-}
+};
 
-export default config
+export default config;
