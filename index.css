@@ -3,3 +3,8 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.ac-item-images {
+  display: flex;
+  margin-top: 0.5rem;
+}
