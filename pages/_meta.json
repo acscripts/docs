@@ -2,5 +2,17 @@
   "index": "Home",
   "radio": "ac_radio",
   "documents": "ac_documents",
-  "gifts": "ac_gifts"
+  "gifts": "ac_gifts",
+  "link_tebex": {
+    "title": "Tebex",
+    "href": "https://ac-scripts.tebex.io/",
+    "type": "page",
+    "newWindow": true
+  },
+  "link_kofi": {
+    "title": "Support us",
+    "href": "https://ko-fi.com/antond",
+    "type": "page",
+    "newWindow": true
+  }
 }
