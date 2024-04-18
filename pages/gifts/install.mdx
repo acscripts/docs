@@ -1,0 +1,93 @@
+import Image from 'next/image'
+
+# Installation
+
+## Items
+
+Add the following snippet to `ox_inventory/data/items.lua`.
+
+```lua copy filename="ox_inventory/data/items.lua"
+['gift'] = {
+    label = 'Gift',
+    weight = 1,
+    stack = false,
+    close = false,
+    consume = 0,
+    server = {
+        export = 'ac_gifts.unwrapGift',
+    },
+},
+
+['empty_gift'] = {
+    label = 'Gift box',
+    weight = 1,
+    stack = false,
+    close = false,
+    consume = 0,
+    buttons = {{
+        label = 'Wrap gift',
+        action = function(slot)
+            TriggerServerEvent('ac_gifts:wrapGift', slot)
+        end,
+    }}
+},
+
+['opened_gift'] = {
+    label = 'Opened gift',
+    weight = 1,
+    stack = false,
+    close = false,
+    consume = 0,
+},
+```
+
+Add the following snippet to the bottom of `ox_inventory/modules/items/containers.lua`.
+
+```lua copy filename="ox_inventory/modules/items/containers.lua"
+setContainerProperties('empty_gift', {
+	slots = 3,
+	maxWeight = 5000,
+})
+```
+
+For more detailed steps, visit the official [Creating items](https://overextended.dev/ox_inventory/Guides/creatingItems) guide.
+
+### Images
+<div className="ac-item-images">
+	<Image src="/images/items/empty_gift.png" alt="empty_gift" width={100} height={100} quality={100} />
+	<Image src="/images/items/gift.png" alt="gift" width={100} height={100} quality={100} />
+	<Image src="/images/items/opened_gift.png" alt="opened_gift" width={100} height={100} quality={100} />
+</div>
+
+
+
+## Obtaining empty gifts
+
+### Shop
+
+```lua copy filename="ox_inventory/data/shops.lua"
+GiftShop = {
+    name = 'Gift shop',
+    inventory = {
+        { name = 'empty_gift', price = 1, metadata = { type = 'small' } },
+        { name = 'empty_gift', price = 3, metadata = { type = 'medium' } },
+        { name = 'empty_gift', price = 5, metadata = { type = 'large' } },
+    }, locations = {
+        vec3(1098.5988, -674.4120, 56.4850),
+    },
+},
+```
+
+### Inventory
+```lua copy
+exports.ox_inventory:AddItem(source, 'empty_gift', 1, 'small')
+```
+
+### Command
+```lua
+-- [size] = any predefined size (defaults to 'defaultSize' from config)
+/giveitem me empty_gift 1 [size]
+
+-- example
+/giveitem me empty_gift 1 small
+```

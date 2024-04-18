@@ -1,0 +1,45 @@
+import Image from 'next/image'
+
+# Getting started
+
+Make sure to read this carefully before using the script.
+
+## Dependencies
+- [OX MySQL (oxmysql)](https://github.com/overextended/oxmysql/releases/latest)
+- your inventory system \*
+
+\* Support for custom inventories can be done by editing the inventory [bridge](ac_documents/bridge).  
+The default inventory bridge is for [ox_inventory](https://github.com/overextended/ox_inventory).  
+All available inventory bridges provided by us are listed [here](ac_documents/bridge), however you can create your own.  
+The inventory **must support metadata**!
+
+
+
+## Database
+Before using the resource, you need to import the `documents.sql` file into your database.  
+
+
+
+## Creating items
+Make sure to create items called `paper`, `document` and `crumpled_paper` in your inventory.  
+You can change the used item names in `ac_documents/editable/config.lua`.  
+You can use the following images or make your own.
+
+<div className="ac-item-images">
+	<Image src="/images/items/paper.png" alt="paper" width={100} height={100} quality={100} />
+	<Image src="/images/items/document.png" alt="document" width={100} height={100} quality={100} />
+	<Image src="/images/items/crumpled_paper.png" alt="crumpled_paper" width={100} height={100} quality={100} />
+</div>
+
+
+
+## Obtaining paper
+We provide snippets for some inventories or shops, however you can also create your own.  
+If you want to make your own system to get papers, use the following server export.
+```lua copy filename="Your own script"
+-- server side
+local preset = 'MedicalReport'
+local count = 1
+
+exports.ac_documents:givePaper(source, preset, count)
+```
