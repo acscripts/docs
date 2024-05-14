@@ -6,7 +6,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     const { asPath } = useRouter();
     return {
-      titleTemplate: asPath === '/' ? '%s' : '%s - AC Scripts',
+      titleTemplate: asPath === '/' ? 'AC Scripts' : '%s - AC Scripts',
     };
   },
   head: (
