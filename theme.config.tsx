@@ -13,7 +13,7 @@ const config: DocsThemeConfig = {
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
-      <script defer data-domain="docs.acscripts.dev" src="https://analytics.dejv.it/js/script.js"></script>
+      <script defer src="https://analytics.dejv.it/script.js" data-website-id="388963db-aa71-419c-866d-71c6c5fa6d97"></script>
     </>
   ),
 
