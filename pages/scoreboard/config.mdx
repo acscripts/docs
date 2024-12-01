@@ -1,0 +1,194 @@
+# Configuration
+
+
+## settings \{ \}
+
+### title
+Text and logo shown in the scoreboard header.
+
+**Accepted values**  
+text: `string`  
+logo: `string` (URL to the image file)
+
+---
+
+### side
+On which side of the screen should the scoreboard be displayed.
+
+**Accepted values**  
+`string` → `'left'` or `'right'`
+
+---
+
+### showOverlay
+Enable showing background overlay when scoreboard is open.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### closeOnEscape
+Close scoreboard when the escape key is pressed.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### closeOnOutsideClick
+Close scoreboard when clicked outside of it.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### uppercaseNames
+Make all player names uppercase.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### highlightEmptyGroups
+Highlight empty groups by making the count number red.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### compactPlayers
+Change the player row height to be more compact.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### compactGroups
+Change the group row height to be more compact.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### playerColumns
+How many columns to use for player list.  
+`2` columns will show 2 players per row, so it will be more compact.
+
+**Accepted values**  
+`number` → `1` or `2`
+
+---
+
+### groupColumns
+How many columns to use for group list.  
+`2` columns will show 2 groups per row, so it will be more compact.
+
+**Accepted values**  
+`number` → `1` or `2`
+
+
+
+<hr class="ac-splitter" />
+
+
+
+## visibleSections \{ \}
+Default visibility state of each scoreboard section.
+
+### groups
+Show or hide the groups section.
+
+---
+
+### players
+Show or hide the players section.
+
+---
+
+### playerNames
+Show or hide player names in the players section.  
+Setting this to `false` will change all player names to "**Anonymous player**".
+
+---
+
+### playerIds
+Show or hide player IDs in the players section.  
+Setting this to `false` will hide all player IDs.
+
+---
+
+### statusIndicators
+Show or hide the status indicators section.
+
+---
+
+### footer
+Show or hide the footer section.
+
+
+
+<hr class="ac-splitter" />
+
+
+
+## commandName
+Name of the command to open the scoreboard.
+
+**Accepted values**  
+`string`
+
+
+
+## commandKey
+Default keybind for the radio command.
+
+**Accepted values**  
+`false` = Keybind will not be created at all.  
+`''` = Empty quotes for creating the keybind, but not setting a default key.  
+`'NUMPAD0'` = Or any other [valid key](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard) to create a keybind with *this* key as a default.
+
+
+
+## includeOffDuty
+Include off-duty players in the group count.
+
+**Accepted values**  
+`boolean` (true / false)
+
+
+
+## groups
+Individual group rows shown in scoreboard.
+
+**Accepted values**  
+`table[]` with the following structure:
+
+```ts
+{
+  label: string; // Name of the group row shown in scoreboard
+  groups: string[]; // Array of groups to include in this row's total count
+}
+```
+
+
+
+## statusIndicators
+Individual status indicators shown in the section.  
+For more information on the icons, see the guide [here](./install.mdx).
+
+**Accepted values**  
+`table[]` with the following structure:
+
+```ts
+{
+  id: string; // Unique identifier for the status indicator, used in your exports to change the state
+  label: string; // Label visible in the hover tooltip
+  icon: string; // Icon of the indicator, must be a valid Iconify name (see more in the link above)
+  defaultState?: boolean; // Default state of the indicator; true = on, false = off
+}
