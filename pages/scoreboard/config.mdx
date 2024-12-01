@@ -16,7 +16,7 @@ logo: `string` (URL to the image file)
 On which side of the screen should the scoreboard be displayed.
 
 **Accepted values**  
-`string` → `'left'` or `'right'`
+`string` → `'left'{:lua}` or `'right'{:lua}`
 
 ---
 
@@ -81,7 +81,7 @@ How many columns to use for player list.
 `2` columns will show 2 players per row, so it will be more compact.
 
 **Accepted values**  
-`number` → `1` or `2`
+`number` → `1{:lua}` or `2{:lua}`
 
 ---
 
@@ -90,16 +90,22 @@ How many columns to use for group list.
 `2` columns will show 2 groups per row, so it will be more compact.
 
 **Accepted values**  
-`number` → `1` or `2`
+`number` → `1{:lua}` or `2{:lua}`
 
 
 
-<hr class="ac-splitter" />
+<hr className="ac-splitter" />
 
 
 
 ## visibleSections \{ \}
-Default visibility state of each scoreboard section.
+The following accepted values are valid for all options in this category.  
+See the [guide](./guides/ace-sections) for more information on how to use ACE permissions.
+
+**Accepted values**  
+`true{:lua}`: Visible for everyone  
+`false{:lua}`: Completely disabled and hidden for everyone  
+`'limited'{:lua}`: Visible only for players with the required ACE permission
 
 ### groups
 Show or hide the groups section.
@@ -113,13 +119,13 @@ Show or hide the players section.
 
 ### playerNames
 Show or hide player names in the players section.  
-Setting this to `false` will change all player names to "**Anonymous player**".
+Setting this to `false{:lua}` will change all player names to "**Anonymous player**".
 
 ---
 
 ### playerIds
 Show or hide player IDs in the players section.  
-Setting this to `false` will hide all player IDs.
+Setting this to `false{:lua}` will hide all player IDs.
 
 ---
 
@@ -133,7 +139,7 @@ Show or hide the footer section.
 
 
 
-<hr class="ac-splitter" />
+<hr className="ac-splitter" />
 
 
 
@@ -149,9 +155,9 @@ Name of the command to open the scoreboard.
 Default keybind for the radio command.
 
 **Accepted values**  
-`false` = Keybind will not be created at all.  
-`''` = Empty quotes for creating the keybind, but not setting a default key.  
-`'NUMPAD0'` = Or any other [valid key](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard) to create a keybind with *this* key as a default.
+`false{:lua}` = Keybind will not be created at all.  
+`''{:lua}` = Empty quotes for creating the keybind, but not setting a default key.  
+`'NUMPAD0'{:lua}` = Or any other [valid key](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard) to create a keybind with *this* key as a default.
 
 
 
@@ -180,7 +186,8 @@ Individual group rows shown in scoreboard.
 
 ## statusIndicators
 Individual status indicators shown in the section.  
-For more information on the icons, see the guide [here](./install.mdx).
+For more information on how to use custom icons, see the guide [here](./issues#status-indicator-icon-is-not-showing).  
+To learn how to change the state of these indicators, see the guide [here](./guides/status-indicators).
 
 **Accepted values**  
 `table[]` with the following structure:
@@ -189,6 +196,6 @@ For more information on the icons, see the guide [here](./install.mdx).
 {
   id: string; // Unique identifier for the status indicator, used in your exports to change the state
   label: string; // Label visible in the hover tooltip
-  icon: string; // Icon of the indicator, must be a valid Iconify name (see more in the link above)
+  icon: string; // Icon of the indicator, must be a valid Iconify name
   defaultState?: boolean; // Default state of the indicator; true = on, false = off
 }

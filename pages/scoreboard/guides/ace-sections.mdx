@@ -1,0 +1,73 @@
+import { Steps } from 'nextra/components'
+
+# Control visible sections using ACE permissions
+
+You can control the visibility of individual sections in the scoreboard using ACE permissions.  
+This is useful if you want to show/hide certain sections only for certain players.
+
+This guide will use the *groups* section as an example, but it works the same for all options.
+
+
+
+## Requirements
+- understanding of FiveM ACE permissions  
+- your own custom logic for controlling and setting the permissions
+
+
+
+## Configuration
+To enable ACE permissions for a section, you need to change the value of it in the `config.lua` file.
+
+**There are 3 valid values:**  
+`true{:lua}`: Visible for everyone  
+`false{:lua}`: Completely disabled and hidden for everyone  
+`'limited'{:lua}`: Visible only for players with the required ACE permission
+
+In this case, we want to use the last value → `'limited'{:lua}`.
+
+
+
+## Steps
+
+<Steps>
+
+### Modify the config file
+Change the value of `groups` in `visibleSections` from `true{:lua}` to `'limited'{:lua}`.
+
+```lua {2} /'limited'/
+visibleSections = {
+    groups = 'limited',
+    players = true,
+    playerNames = true,
+    playerIds = true,
+    statusIndicators = true,
+    footer = true,
+},
+```
+
+### Restart the resource
+
+### Set the ACE permission
+Use your own custom code and logic to set the ACE permission for specific players you want to see the group section. You can use [this](https://forum.cfx.re/t/90917) guide as a reference.
+
+ACE permission for the group section is `scoreboard.show.groups`.  
+For other options, just replace `groups` with the name of the option (e.g. `scoreboard.show.playerNames`).
+
+You can set the ACE permission using `ExecuteCommand` in your server-side code
+```lua filename="server.lua"
+ExecuteCommand('add_ace group.admin scoreboard.show.groups allow')
+```
+
+or anywhere in your `server.cfg` file.
+```bash filename="server.cfg"
+add_ace group.admin scoreboard.show.groups allow
+```
+
+You can add or remove the permissions during runtime. It will take effect immediately after reopening the scoreboard.
+
+### Test it
+If you did everything correctly, the group section will be visible only for players with the `scoreboard.show.groups` ACE permission. In this example, we set it to the `group.admin` group.
+
+In case it's not working, read this whole page from the beginning and check if you missed something.
+
+</Steps>
