@@ -30,8 +30,8 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/acscripts/docs/tree/main',
   feedback: { content: null },
   footer: {
-      <div className="ac-footer">
     content: (
+      <div className="flex items-center gap-2">
         <span>© {new Date().getFullYear()}</span>
         <Image src="/logo.svg" alt="logo" width={24} height={24} />
         <span>AC Scripts</span>

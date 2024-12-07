@@ -1,16 +1,7 @@
-.ac-footer {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.ac-item-images {
-  display: flex;
-  margin-top: 0.5rem;
-}
+@import "tailwindcss";
 
 .ac-splitter {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  border-top-width: 3px;
+  border-top-width: 2px;
 }
