@@ -1,21 +1,21 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import type { DocsThemeConfig } from 'nextra-theme-docs';
+import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
-  useNextSeoProps() {
+  head() {
     const { asPath } = useRouter();
-    return {
-      titleTemplate: asPath === '/' ? 'AC Scripts' : '%s - AC Scripts',
-    };
+    const { title } = useConfig();
+
+    return (
+      <>
+        <title>{asPath === '/' ? 'AC Scripts' : `${title} - AC Scripts`}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
+        <script defer src="https://analytics.dejv.it/script.js" data-website-id="388963db-aa71-419c-866d-71c6c5fa6d97"></script>
+      </>
+    )
   },
-  head: (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="/logo.svg" type="image/x-icon" />
-      <script defer src="https://analytics.dejv.it/script.js" data-website-id="388963db-aa71-419c-866d-71c6c5fa6d97"></script>
-    </>
-  ),
 
   logo: (
     <>
@@ -30,8 +30,8 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/acscripts/docs/tree/main',
   feedback: { content: null },
   footer: {
-    text: (
       <div className="ac-footer">
+    content: (
         <span>© {new Date().getFullYear()}</span>
         <Image src="/logo.svg" alt="logo" width={24} height={24} />
         <span>AC Scripts</span>
