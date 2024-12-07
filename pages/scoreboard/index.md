@@ -16,4 +16,4 @@ Supported frameworks are [ox_core](https://github.com/overextended/ox_core), [qb
 - Total player count and copyable server ID
 
 ### Preview
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9zxbDJMhVSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D_S4OmYOKJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
