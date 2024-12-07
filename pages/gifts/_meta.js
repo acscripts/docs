@@ -3,4 +3,4 @@ export default {
   install: 'Installation',
   config: 'Configuration',
   issues: 'Common issues',
-}
+};

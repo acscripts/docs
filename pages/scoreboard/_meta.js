@@ -3,4 +3,4 @@ export default {
   config: 'Configuration',
   guides: 'Guides',
   issues: 'Common issues',
-}
+};

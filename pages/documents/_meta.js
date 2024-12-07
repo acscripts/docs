@@ -5,4 +5,4 @@ export default {
   'exports-and-events': 'Exports and events',
   config: 'Configuration',
   issues: 'Common issues',
-}
+};
