@@ -1,0 +1,201 @@
+# Configuration
+
+
+## settings \{ \}
+
+### title
+Text and logo shown in the scoreboard header.
+
+**Accepted values**  
+text: `string`  
+logo: `string` (URL to the image file)
+
+---
+
+### side
+On which side of the screen should the scoreboard be displayed.
+
+**Accepted values**  
+`string` → `'left'{:lua}` or `'right'{:lua}`
+
+---
+
+### showOverlay
+Enable showing background overlay when scoreboard is open.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### closeOnEscape
+Close scoreboard when the escape key is pressed.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### closeOnOutsideClick
+Close scoreboard when clicked outside of it.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### uppercaseNames
+Make all player names uppercase.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### highlightEmptyGroups
+Highlight empty groups by making the count number red.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### compactPlayers
+Change the player row height to be more compact.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### compactGroups
+Change the group row height to be more compact.
+
+**Accepted values**  
+`boolean` (true / false)
+
+---
+
+### playerColumns
+How many columns to use for player list.  
+`2` columns will show 2 players per row, so it will be more compact.
+
+**Accepted values**  
+`number` → `1{:lua}` or `2{:lua}`
+
+---
+
+### groupColumns
+How many columns to use for group list.  
+`2` columns will show 2 groups per row, so it will be more compact.
+
+**Accepted values**  
+`number` → `1{:lua}` or `2{:lua}`
+
+
+
+<hr className="ac-splitter" />
+
+
+
+## visibleSections \{ \}
+The following accepted values are valid for all options in this category.  
+See the [guide](./guides/ace-sections) for more information on how to use ACE permissions.
+
+**Accepted values**  
+`true{:lua}`: Visible for everyone  
+`false{:lua}`: Completely disabled and hidden for everyone  
+`'limited'{:lua}`: Visible only for players with the required ACE permission
+
+### groups
+Show or hide the groups section.
+
+---
+
+### players
+Show or hide the players section.
+
+---
+
+### playerNames
+Show or hide player names in the players section.  
+Setting this to `false{:lua}` will change all player names to "**Anonymous player**".
+
+---
+
+### playerIds
+Show or hide player IDs in the players section.  
+Setting this to `false{:lua}` will hide all player IDs.
+
+---
+
+### statusIndicators
+Show or hide the status indicators section.
+
+---
+
+### footer
+Show or hide the footer section.
+
+
+
+<hr className="ac-splitter" />
+
+
+
+## commandName
+Name of the command to open the scoreboard.
+
+**Accepted values**  
+`string`
+
+
+
+## commandKey
+Default keybind for the radio command.
+
+**Accepted values**  
+`false{:lua}` = Keybind will not be created at all.  
+`''{:lua}` = Empty quotes for creating the keybind, but not setting a default key.  
+`'NUMPAD0'{:lua}` = Or any other [valid key](https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard) to create a keybind with *this* key as a default.
+
+
+
+## includeOffDuty
+Include off-duty players in the group count.
+
+**Accepted values**  
+`boolean` (true / false)
+
+
+
+## groups
+Individual group rows shown in scoreboard.
+
+**Accepted values**  
+`table[]` with the following structure:
+
+```ts
+{
+  label: string; // Name of the group row shown in scoreboard
+  groups: string[]; // Array of groups to include in this row's total count
+}
+```
+
+
+
+## statusIndicators
+Individual status indicators shown in the section.  
+For more information on how to use custom icons, see the guide [here](./issues#status-indicator-icon-is-not-showing).  
+To learn how to change the state of these indicators, see the guide [here](./guides/status-indicators).
+
+**Accepted values**  
+`table[]` with the following structure:
+
+```ts
+{
+  id: string; // Unique identifier for the status indicator, used in your exports to change the state
+  label: string; // Label visible in the hover tooltip
+  icon: string; // Icon of the indicator, must be a valid Iconify name
+  defaultState?: boolean; // Default state of the indicator; true = on, false = off
+}

@@ -8,3 +8,9 @@
   display: flex;
   margin-top: 0.5rem;
 }
+
+.ac-splitter {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top-width: 3px;
+}

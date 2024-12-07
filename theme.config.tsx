@@ -25,7 +25,7 @@ const config: DocsThemeConfig = {
   ),
 
   project: { link: 'https://github.com/acscripts' },
-  chat: { link: 'https://discord.gg/2ZezMw2xvR' },
+  chat: { link: 'https://discord.acscripts.dev' },
 
   docsRepositoryBase: 'https://github.com/acscripts/docs/tree/main',
   feedback: { content: null },

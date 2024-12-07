@@ -1,11 +1,12 @@
 {
   "index": "Home",
-  "radio": "ac_radio",
-  "documents": "ac_documents",
-  "gifts": "ac_gifts",
+  "radio": "AC Radio",
+  "scoreboard": "AC Scoreboard",
+  "documents": "AC Documents",
+  "gifts": "AC Gifts",
   "link_tebex": {
     "title": "Tebex",
-    "href": "https://ac-scripts.tebex.io/",
+    "href": "https://store.acscripts.dev/",
     "type": "page",
     "newWindow": true
   },
