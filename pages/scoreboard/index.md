@@ -1,6 +1,6 @@
 # Introduction
 
-**AC Scoreboard** is the ultimate standalone scoreboard solution for your server.
+**AC Scoreboard** is the ultimate scoreboard solution for your server.
 
 You can use any supported framework to enable additional features such as group list.  
 Supported frameworks are [ox_core](https://github.com/overextended/ox_core), [qbx_core](https://github.com/Qbox-project/qbx_core), [qb-core](https://github.com/qbcore-framework/qb-core) and [es_extended](https://github.com/esx-framework/esx_core).
