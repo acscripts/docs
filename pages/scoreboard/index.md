@@ -1,4 +1,4 @@
-# Getting started
+# Introduction
 
 **AC Scoreboard** is the ultimate standalone scoreboard solution for your server.
 
