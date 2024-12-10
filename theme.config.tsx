@@ -39,8 +39,8 @@ const config: DocsThemeConfig = {
     ),
   },
 
-  darkMode: true,
-  nextThemes: { defaultTheme: 'dark' },
+  darkMode: false,
+  nextThemes: { defaultTheme: 'dark', forcedTheme: 'dark' },
 };
 
 export default config;
