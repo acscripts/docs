@@ -1,4 +1,4 @@
-import { Callout } from 'nextra/components'
+import { Callout, Table, Td, Th, Tr } from 'nextra/components'
 
 # Bridge
 
@@ -30,42 +30,42 @@ Yes, we can. But there are some requirements that the inventory must meet:
 - Full metadata support
 - Free **OR** well documented (if paid)
 
-{<table style={{textAlign:'center', overflow:'hidden'}}>
+{<Table style={{textAlign:'center', overflow:'hidden'}}>
   <thead>
-    <tr>
-      <th>Inventory</th>
-      <th>Secured</th>
-      <th>Metadata</th>
-      <th>Free / Docs</th>
-    </tr>
+    <Tr>
+      <Th>Inventory</Th>
+      <Th>Secured</Th>
+      <Th>Metadata</Th>
+      <Th>Free / Docs</Th>
+    </Tr>
   </thead>
   <tbody>
-    <tr>
-      <td>OX Inventory</td>
-      <td>✔️</td>
-      <td>✔️</td>
-      <td>✔️</td>
-    </tr>
-    <tr>
-      <td>ESX Inventory</td>
-      <td>Somehow</td>
-      <td>❌</td>
-      <td>✔️</td>
-    </tr>
-    <tr>
-      <td>QB Inventory *</td>
-      <td>❌</td>
-      <td>Bad</td>
-      <td>✔️</td>
-    </tr>
-    <tr>
-      <td>QS Inventory **</td>
-      <td>❌</td>
-      <td>Less bad</td>
-      <td>❌</td>
-    </tr>
+    <Tr>
+      <Td>OX Inventory</Td>
+      <Td>✔️</Td>
+      <Td>✔️</Td>
+      <Td>✔️</Td>
+    </Tr>
+    <Tr>
+      <Td>ESX Inventory</Td>
+      <Td>Somehow</Td>
+      <Td>❌</Td>
+      <Td>✔️</Td>
+    </Tr>
+    <Tr>
+      <Td>QB Inventory *</Td>
+      <Td>❌</Td>
+      <Td>Bad</Td>
+      <Td>✔️</Td>
+    </Tr>
+    <Tr>
+      <Td>QS Inventory **</Td>
+      <Td>❌</Td>
+      <Td>Less bad</Td>
+      <Td>❌</Td>
+    </Tr>
   </tbody>
-</table>}
+</Table>}
 
 \* This also aplies to LJ Inventory or other reskins.  
 It is very exploitable. Metadata support is poorly written with lot of bugs.
