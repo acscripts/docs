@@ -3,7 +3,8 @@
 ## Shared options
 The following options are available and same for all field types.
 Type specific options are supposed to be added among these.
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   label: string; // input label
   placeholder?: string; // describes expected value
@@ -28,7 +29,8 @@ This is how the options are written in your standard Lua table.
 
 
 ## Text
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'text';
   value?: string; // default value
@@ -41,7 +43,8 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 
 
 ## Textarea
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'textarea';
   value?: string; // default value
@@ -57,7 +60,8 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 
 
 ## Number
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'number';
   value?: number; // default value
@@ -73,7 +77,8 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 
 
 ## Date
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'date';
   value?: string; // default value (only MM.DD.YYYY or MM/DD/YYYY format)
@@ -85,7 +90,8 @@ For unlimited number of characters, set `max` to `-1` - although it's not recomm
 
 
 ## Signature
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'signature';
   value?: string; // default value
@@ -96,7 +102,8 @@ If you don't want the signature font pad to be visible, you can use the [`text`]
 
 
 ## Select
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   type: 'select';
   value?: string; // default value (must be one of the options values)
@@ -112,12 +119,13 @@ data = {'Bob', 'John', 'George'}
 ```
 
 or an array of objects with the following structure.
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   value: string; // value that will be returned as an user input
   label?: string; // label that will be displayed in the select dropdown [default: value]
   disabled?: boolean; // whether the option is disabled
-  group?: string; // group name 
+  group?: string; // group name
 }
 ```
 ```lua filename="Lua"

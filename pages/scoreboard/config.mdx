@@ -175,7 +175,8 @@ Individual group rows shown in scoreboard.
 **Accepted values**  
 `table[]` with the following structure:
 
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   label: string; // Name of the group row shown in scoreboard
   groups: string[]; // Array of groups to include in this row's total count
@@ -192,7 +193,8 @@ To learn how to change the state of these indicators, see the guide [here](./gui
 **Accepted values**  
 `table[]` with the following structure:
 
-```ts
+```ts {1}#hideDummyLine
+type DUMMY =
 {
   id: string; // Unique identifier for the status indicator, used in your exports to change the state
   label: string; // Label visible in the hover tooltip
