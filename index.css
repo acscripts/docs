@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* hide dummy lines used to force TypeScript Type highlighting */
-code.nextra-code span[data-highlighted-line-id="hideDummyLine"] {
+code.nextra-code span[data-highlighted-line-id='hideDummyLine'] {
   display: none;
 }
 

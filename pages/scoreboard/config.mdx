@@ -180,6 +180,7 @@ type DUMMY =
 {
   label: string; // Name of the group row shown in scoreboard
   groups: string[]; // Array of groups to include in this row's total count
+  includeOffDuty?: boolean; // Include off-duty players in total count (overrides the global setting)
 }
 ```
 
@@ -188,7 +189,8 @@ type DUMMY =
 ## statusIndicators
 Individual status indicators shown in the section.  
 For more information on how to use custom icons, see the guide [here](./issues#status-indicator-icon-is-not-showing).  
-To learn how to change the state of these indicators, see the guide [here](./guides/status-indicators).
+To learn how to change the state of these indicators manually, see the guide [here](./guides/status-indicators/manual).  
+More information about automatically enabling indicators using groups can be found [here](./guides/status-indicators/group-trigger).
 
 **Accepted values**  
 `table[]` with the following structure:
@@ -200,4 +202,10 @@ type DUMMY =
   label: string; // Label visible in the hover tooltip
   icon: string; // Icon of the indicator, must be a valid Iconify name
   defaultState?: boolean; // Default state of the indicator; true = on, false = off
+  groupTrigger?: { // Automatically enable the indicator when the requirements below are met
+    groups: string[]; // Array of groups required to enable the indicator
+    minimumCount: number; // Minimum count of players with the groups above to enable the indicator
+    includeOffDuty?: boolean; // Whether to include off-duty players in the `minimumCount`
+  };
 }
+```

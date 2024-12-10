@@ -1,0 +1,63 @@
+import { Steps } from 'nextra/components'
+
+# Group count based automation of states
+
+You can use the integrated option to automatically change the states of status indicators based on the count of players in specified groups.
+
+This guide will show you how to configure the `bank_robbery` status indicator, but it works the same for all indicators.
+
+
+
+## Configuration
+You have to set the desired values in the `config.lua` file.  
+The entire configuration is done using the `groupTrigger` field.
+
+```lua filename="config.lua" {6-10} /'bank_robbery'/
+statusIndicators = {
+    {
+        id = 'bank_robbery',
+        label = 'Bank robbery',
+        icon = 'mdi:bank',
+        groupTrigger = {
+            groups = {'police', 'sheriff'},
+            minimumCount = 12,
+            includeOffDuty = true,
+        },
+    },
+},
+```
+
+**`groups`**  
+Array of group names whose total count will be compared to the `minimumCount` value.  
+If the total count is greater or equal to the `minimumCount`, the indicator will be enabled.
+
+**`minimumCount`**  
+Minimum count of players in the specified groups to enable the indicator.
+
+**`includeOffDuty`**  
+Whether to include off-duty players in the total count.
+
+
+
+## Overriding the current state
+You can still manually change the state of the indicator, even if it's set to be automatically controlled.  
+However, this doing so will forcibly override the automated state until you remove the manual override.
+
+You can do so using the `forceIndicatorState` export.  
+The following example will force the `bank_robbery` indicator to be enabled no matter the group count.
+```lua copy filename="server.lua" /'bank_robbery'/ /true/
+exports.ac_scoreboard:forceIndicatorState('bank_robbery', true)
+
+-- or use non-networked server event
+TriggerEvent('ac_scoreboard:forceIndicatorState', 'bank_robbery', true)
+```
+
+The first argument is the indicator ID from `config.lua`.  
+The second argument is a boolean value that forces the corresponding state.
+
+If you want to remove the manual override, you can use the same export with the second argument set to `nil`.
+```lua copy filename="server.lua" /nil/
+exports.ac_scoreboard:forceIndicatorState('bank_robbery', nil)
+```
+
+Keep in mind that you cannot use the `setIndicatorState` export to change the state of indicators that are set to be automatically controlled. You can only use this (`forceIndicatorState`) export to temporarily override the automated state.

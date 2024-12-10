@@ -11,3 +11,8 @@ In case you don't know how to do this, just download the latest prebuilt version
 The icon must be a valid **Iconify** icon. You can find the list on [Icônes.js](https://icones.js.org/).  
 Simply find your desired icon and copy it's name as shown in the example below.
 ![Icon on Icones.js](/images/examples/ac_scoreboard/icones-icon.png)
+
+## Status indicator is not changing while using `setIndicatorState` export
+For more information, see the [status indicators guide](./guides/status-indicators).
+- Make sure you're using the correct indicator ID.
+- This export can be only used to control indicators that don't have the `groupTrigger` field set in the `config.lua` file. If you want to temporarily override state of indicator with `groupTrigger`, use the `forceIndicatorState` export instead.

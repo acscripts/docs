@@ -1,0 +1,59 @@
+import { Steps } from 'nextra/components'
+
+# Manually change states of status indicators
+
+You can change the states of individual status indicators.  
+This is useful if you want to indicate certain YES or NO states for players.
+
+This guide will show you how to change the state of `house_robbery` status indicator, but it works the same for all indicators.
+
+
+
+## Requirements
+- ability to write your own custom logic for controlling the states
+
+
+
+## Configuration
+You need to find the status indicator ID. This can be found in the `config.lua` file.  
+Each status indicator needs to have a unique ID so you can identify it.
+
+```lua filename="config.lua" {3} /'house_robbery'/
+statusIndicators = {
+    {
+        id = 'house_robbery',
+        label = 'House robbery',
+        icon = 'mdi:house',
+        defaultState = true,
+    },
+},
+```
+
+
+
+## Steps
+
+<Steps>
+
+### Create a custom server resource
+The state can be only changed from server-side resources.  
+Create a new resource (or use an existing one) and add the following custom logic to it's server-side file.
+
+### Use the `setIndicatorState` export
+```lua copy filename="server.lua" /'house_robbery'/ /true/
+exports.ac_scoreboard:setIndicatorState('house_robbery', true)
+
+-- or use non-networked server event
+TriggerEvent('ac_scoreboard:setIndicatorState', 'house_robbery', true)
+```
+
+The first argument is the indicator ID from `config.lua`.  
+The second argument is a boolean value that sets the corresponding state.
+
+### Test it
+Run your custom logic and see how the indicator state changes.  
+All indicator changes take effect immediately after reopening the scoreboard.
+
+**In case it's not working, read this whole page again from the beginning and check if you missed something.**
+
+</Steps>
