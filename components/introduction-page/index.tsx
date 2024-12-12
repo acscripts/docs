@@ -48,11 +48,11 @@ const Introduction: React.FC = () => {
           <h1 className="!text-5xl !font-medium">AC Scripts</h1>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <Link
             href="https://github.com/acscripts"
             target="_blank"
-            className="flex w-fit items-center gap-1 rounded-md bg-[#333333] p-2"
+            className="flex w-fit items-center gap-2 rounded-md bg-[#333333] px-4 py-2"
           >
             <Icon icon="mdi:github" className="h-6 w-6" />
             <p className="!text-md !font-medium">GitHub</p>
@@ -61,7 +61,7 @@ const Introduction: React.FC = () => {
           <Link
             href="https://discord.acscripts.dev"
             target="_blank"
-            className="flex w-fit items-center gap-1 rounded-md bg-[#5865f2] p-2"
+            className="flex w-fit items-center gap-2 rounded-md bg-[#5865f2] px-4 py-2"
           >
             <Icon icon="ic:baseline-discord" className="h-6 w-6" />
             <p className="!text-md !font-medium">Discord</p>
@@ -70,9 +70,9 @@ const Introduction: React.FC = () => {
           <Link
             href="https://store.acscripts.dev"
             target="_blank"
-            className="flex w-fit items-center gap-1 rounded-md bg-[#41c4c3] p-2 !text-black"
+            className="flex w-fit items-center gap-2 rounded-md bg-[#41c4c3] px-4 py-2 !text-black"
           >
-            <Icon icon="ac:tebex" className="h-6 w-6" />
+            <Icon icon="ac:tebex" className="h-6 w-auto" />
             <p className="!text-md !font-medium">Tebex</p>
           </Link>
         </div>
