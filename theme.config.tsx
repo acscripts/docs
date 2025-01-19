@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
       <>
         <title>{asPath === '/' ? 'AC Scripts' : `${title} - AC Scripts`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script defer src="https://analytics.dejv.it/script.js" data-website-id="388963db-aa71-419c-866d-71c6c5fa6d97"></script>
+        <script defer src="https://analytics.dejv.dev/script.js" data-website-id="388963db-aa71-419c-866d-71c6c5fa6d97"></script>
 
         <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
